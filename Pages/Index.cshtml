@@ -1,4 +1,4 @@
-﻿@page
+@page
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
@@ -6,50 +6,84 @@
 
 <!-- MAIN (Center website) -->
 <div class="main">
-<h1>Link Up</h1>
-<P>This is a simple .NET web project.</P>
-<hr>
-<div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('all')"> All</button>
-  <button class="btn" onclick="filterSelection('explore')"> Explore</button>
-  <button class="btn" onclick="filterSelection('myaccount')"> My Account</button>
-
-</div>
-
-<!-- Portfolio Gallery Grid -->
-<div class="row">
-  <div class="All">
-    <div class="content">
-    <img src="https://linkupstor.blob.core.windows.net/images/Capture d'écran 2024-09-18 132758.png" alt="Image depuis Azure Blob Storage">
-      <h5>Setup GLPI Agent 1.9</h5>
+    <h1>Link Up</h1>
+    <p>This is a simple .NET web project.</p>
+    <hr>
+    <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')">All</button>
+        <button class="btn" onclick="filterSelection('explore')">Explore</button>
+        <button class="btn" onclick="filterSelection('myaccount')">My Account</button>
     </div>
-  </div>
-  <div class="All">
-    <div class="content">
-    <img src="https://linkupstor.blob.core.windows.net/images/Capture d'écran 2024-12-03 133828.png" alt="Image depuis Azure Blob Storage 2">
-      <h5>API Connections Azure</h5>
+
+    <!-- Portfolio Gallery Grid -->
+    <div class="row">
+        <div class="content">
+            <img src="https://linkupstor.blob.core.windows.net/images/Capture d'écran 2024-09-18 132758.png" alt="Image depuis Azure Blob Storage">
+            <h5>Setup GLPI Agent 1.9</h5>
+        </div>
+        <div class="content">
+            <img src="https://linkupstor.blob.core.windows.net/images/Capture d'écran 2024-12-03 133828.png" alt="Image depuis Azure Blob Storage 2">
+            <h5>API Connections Azure</h5>
+        </div>
+        <div class="content">
+            <img src="https://linkupstor.blob.core.windows.net/images/viria_service_energie_environnement_logo.jpg" alt="Image depuis Azure Blob Storage 3">
+            <h5>Joli logo</h5>
+        </div>
     </div>
-  </div>
-  <div class="My Account">
-    <div class="content">
-    <img src="https://linkupstor.blob.core.windows.net/images/viria_service_energie_environnement_logo.jpg" alt="Image depuis Azure Blob Storage 3">
-      <h5>Joli logo</h5>
-    </div>
-  </div>
-  
-
-
-
-
-
-
-
-<!-- END GRID -->
+    <!-- END GRID -->
 </div>
 
 <!-- END MAIN -->
 </div>
 
+<style>
+    /* Centrer le contenu principal */
+    .main {
+        text-align: center;
+        font-family: Arial, sans-serif;
+    }
 
+    /* Alignement horizontal des images */
+    .row {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
+        gap: 20px; /* Espace entre les images */
+        margin-top: 20px;
+    }
 
+    /* Style des conteneurs */
+    .content {
+        text-align: center;
+        width: 200px; /* Largeur fixe pour un meilleur alignement */
+    }
 
+    /* Images responsive */
+    .content img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px; /* Coins arrondis */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Boutons */
+    .btn {
+        margin: 10px;
+        padding: 10px 20px;
+        background-color: #0078d7;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    .btn:hover {
+        background-color: #005bb5;
+    }
+
+    .btn.active {
+        background-color: #005bb5;
+        font-weight: bold;
+    }
+</style>
